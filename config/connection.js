@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
 } else {
 	// local database
 	connection = mysql.createConnection({
-		port: 3306,
+		port: 8000,
 		host: 'localhost',
 		user: 'root',		  // update
 		password: 'admin',  // update
