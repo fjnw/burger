@@ -1,0 +1,51 @@
+body {
+	background: black;
+	color: white;
+}
+
+ul, li {
+	list-style: none;
+}
+
+input {
+	border-radius: 0px !important;
+	background: black !important;
+	color: white !important;
+	/*border-right: none !important;*/
+}
+
+.btn-outline-success {
+	border-radius: 0px !important;
+	border-left: none;
+}
+
+#main {
+	margin: 10px 0 60px 0;
+}
+
+#search {
+	margin: 0 0 50px 0;
+}
+
+#burger-img {
+	max-width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.btn-outline-warning, .btn-outline-danger {
+	margin: 0 0 10px 0;
+}
+
+footer {
+	margin: 30px 0 0 0;
+	position: relative;
+	bottom: 30px;
+	right: 0;
+	left: 0;
+	color: red;
+	opacity: .6;
+	font-weight: 200;
+}

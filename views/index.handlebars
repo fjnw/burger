@@ -1,0 +1,38 @@
+<div class="row" id="search">
+	<div class="col-md-12">
+		<form action="/burgers" method="POST">
+			<div class="form-inline justify-content-center">
+				<input type="text" name="burger_name" placeholder="Order Your Burger" class="form-control col-md-3">
+				<button type="submit button" class="btn btn-outline-success">Order</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4 text-center">
+		<ul>
+			{{#each burgers}}
+				{{#unless this.devoured}}
+					<li>
+						<form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+							<button type="submit button" class='btn btn-outline-warning'> {{this.burger_name}}</button>
+						</form>
+					</li>
+				{{/unless}}
+			</ul>
+		{{/each}}
+	</div>
+
+	<div class="col-md-4 offset-md-4 text-center">
+		<ul>
+			{{#each burgers}}
+				{{#if this.devoured}}
+					<li>
+						<button type="submit button" class='btn btn-outline-danger' disabled> {{this.burger_name}} </button>
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul
+	</div>
+</div>
